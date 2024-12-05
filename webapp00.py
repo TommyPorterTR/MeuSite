@@ -21,7 +21,7 @@ def add_background_image(image_url):
         """, unsafe_allow_html=True)
 
 # Adicione a imagem de fundo (coloque a URL da imagem desejada entre aspas)
-image_url = "https://assets.folhavitoria.com.br/images/a0322d70-1f5c-11ef-9ec9-9f1d3c6a39fe--minified.jpg"  # Substitua com o caminho da sua imagem ou URL
+image_url = https://assets.folhavitoria.com.br/images/a0322d70-1f5c-11ef-9ec9-9f1d3c6a39fe--minified.jpg  # Substitua com o caminho da sua imagem ou URL
 add_background_image(image_url)
 
 
