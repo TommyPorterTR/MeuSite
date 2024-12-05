@@ -8,16 +8,19 @@ custom_html = """
     <style>
         body {
             background-image: url('https://i.gifer.com/embedded/download/C33t.gif');
-            background-size: cover;  /* Faz o GIF cobrir toda a tela */
-            background-position: center;  /* Centraliza o GIF */
-            background-attachment: fixed;  /* Faz o GIF ficar fixo enquanto rola a página */
-        }
+            background-size: 320px 160px;  /* Define largura de 200px e altura de 100px */
 
-        /* Personalizando o texto */
-        .css-1yqfnmp {
-            color: white;
-            font-size: 24px;
-        }
+
+
+
+
+
+        }}
+        .stButton, .stTextInput, .stCheckbox, .stRadio, .stSelectbox, .stSlider {{
+            background-color: rgba(0, 0, 0, 0.5);  /* Fundo semitransparente para widgets */
+            border-radius: 5px;
+            color: white;  /* Cor do texto dentro dos widgets */
+        }}
     </style>
 """
 
