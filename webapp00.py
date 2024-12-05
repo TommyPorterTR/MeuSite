@@ -5,8 +5,6 @@ def add_styles():
     st.markdown(
         """
         <style>
-        /* Modificar a cor da fonte de todos os textos */
-        .css-1d391kg {
             color: #DAA520;  /* Cor branca para o texto */
         }
 
