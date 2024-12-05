@@ -13,7 +13,6 @@ def login_page():
             st.session_state.logged_in = True  # Marca como logado
             st.session_state.page = "form"  # Redireciona para o formulário após login
             st.success("Login bem-sucedido!")
-            st.experimental_rerun()  # Força o app a ser recarregado para atualizar o estado
         else:
             st.error("Nome de usuário ou senha incorretos.")
 
