@@ -11,7 +11,7 @@ custom_html = f"""
     <style>
         body {{
             background-image: url('{image_url}');
-            background-size: 2500% auto;  /* A largura será 100% do elemento, e a altura será proporcional à largura original da imagem */
+            background-size: 2800% auto;  /* A largura será 100% do elemento, e a altura será proporcional à largura original da imagem */
             background-size: auto 2500%;   /* A altura será 50% do elemento, e a largura será proporcional à altura original da imagem */
 
         }}
