@@ -18,7 +18,7 @@ def add_styles():
 
         /* Modificar a cor dos campos de texto */
         .stTextInput input, .stTextArea textarea {
-            color: #DAA520 !important;  /* Cor dourada para os campos de texto */
+            color: #FFFFFF !important;  /* Cor dourada para os campos de texto */
         }
         </style>
         """, unsafe_allow_html=True)
