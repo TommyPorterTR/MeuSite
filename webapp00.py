@@ -20,13 +20,6 @@ def add_background_image(image_url):
         </style>
         """, unsafe_allow_html=True)
 
-# Adicione a imagem de fundo (coloque a URL da imagem desejada entre aspas)
-image_url = https://assets.folhavitoria.com.br/images/a0322d70-1f5c-11ef-9ec9-9f1d3c6a39fe--minified.jpg  # Substitua com o caminho da sua imagem ou URL
-add_background_image(image_url)
-
-
-
-
 # Função de login
 def login_page():
     ID = st.text_input("Digite seu ID:")
@@ -70,6 +63,10 @@ def form_page():
         st.write("Formulário enviado com sucesso!")
         # Redirecionar para o Google Forms com os dados preenchidos
         st.markdown(f'<a href="{url}" target="_blank">Clique aqui para enviar seus dados</a>', unsafe_allow_html=True)
+
+# Adicione a imagem de fundo (coloque a URL da imagem desejada entre aspas)
+image_url = "https://assets.folhavitoria.com.br/images/a0322d70-1f5c-11ef-9ec9-9f1d3c6a39fe--minified.jpg"  # Substitua com o caminho da sua imagem ou URL
+add_background_image(image_url)
 
 # Verifica se o usuário está logado e decide qual página exibir
 if "logged_in" not in st.session_state or not st.session_state.logged_in:
