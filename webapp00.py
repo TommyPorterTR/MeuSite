@@ -1,23 +1,10 @@
 import streamlit as st
 
-# Função para adicionar a imagem de fundo e definir a cor da fonte
-def add_background_image(image_url):
+# Função para definir as cores dos textos e botões
+def add_styles():
     st.markdown(
-        f"""
+        """
         <style>
-        .reportview-container {{
-            background: url("{image_url}");
-            background-size: cover;  /* Garante que a imagem cubra toda a tela */
-            background-position: center;  /* Centraliza a imagem */
-            background-attachment: fixed; /* Garante que a imagem não se mova quando rolar a página */
-            height: 100vh; /* 100% da altura da tela */
-            width: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1; /* Garante que o conteúdo ficará acima da imagem */
-        }}
-
         /* Modificar a cor da fonte de todos os textos */
         .css-1d391kg {
             color: #FFFFFF;  /* Cor branca para o texto */
@@ -38,7 +25,6 @@ def add_background_image(image_url):
             background-color: #4CAF50;  /* Cor verde para o botão */
             color: white;  /* Cor do texto do botão */
         }
-
         </style>
         """, unsafe_allow_html=True)
 
@@ -86,9 +72,8 @@ def form_page():
         # Redirecionar para o Google Forms com os dados preenchidos
         st.markdown(f'<a href="{url}" target="_blank">Clique aqui para enviar seus dados</a>', unsafe_allow_html=True)
 
-# Adiciona a imagem de fundo (coloque a URL da imagem desejada entre aspas)
-image_url = "https://assets.folhavitoria.com.br/images/a0322d70-1f5c-11ef-9ec9-9f1d3c6a39fe--minified.jpg"  # Substitua com a URL correta da imagem
-add_background_image(image_url)
+# Adiciona as alterações de estilo
+add_styles()
 
 # Verifica se o usuário está logado e decide qual página exibir
 if "logged_in" not in st.session_state or not st.session_state.logged_in:
