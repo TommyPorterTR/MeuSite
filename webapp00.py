@@ -1,29 +1,25 @@
 import streamlit as st
 
-# Defina o layout da página
 st.set_page_config(layout="wide")
-
-# Código HTML personalizado para o fundo
+# Custom HTML/CSS for the banner
 custom_html = """
-    <style>
-        body {
-            background-image: url('https://i.gifer.com/embedded/download/C33t.gif');
-            background-size: 1880px 120px;  /* Define largura de 200px e altura de 100px */
-
-
-
-
-
-        }}
-        .stButton, .stTextInput, .stCheckbox, .stRadio, .stSelectbox, .stSlider {{
-            background-color: rgba(0, 0, 0, 0.5);  /* Fundo semitransparente para widgets */
-            border-radius: 5px;
-            color: white;  /* Cor do texto dentro dos widgets */
-        }}
-    </style>
+<div class="banner">
+    <img src="https://assets.folhavitoria.com.br/images/a0322d70-1f5c-11ef-9ec9-9f1d3c6a39fe--minified.jpg" alt="Banner Image">
+</div>
+<style>
+    .banner {
+       width: 160%;
+        height: 200px;
+        overflow: hidden;
+    }
+    .banner img {
+        width: 100%;
+        object-fit: cover;
+    }
+</style>
 """
 
-# Exibe o código HTML
+# Display the custom HTML
 st.components.v1.html(custom_html)
 
 # Função para definir as cores de todos os elementos
