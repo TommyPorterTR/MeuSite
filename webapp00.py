@@ -1,27 +1,34 @@
 import streamlit as st
 import urllib.parse
 
+# Definindo a configuração da página para layout "wide"
 st.set_page_config(layout="wide")
-# Custom HTML/CSS for the banner
-custom_html = """
-<div class="banner">
-    <img src="https://assets.folhavitoria.com.br/images/a0322d70-1f5c-11ef-9ec9-9f1d3c6a39fe--minified.jpg" alt="Banner Image">
-</div>
-<style>
-    .banner {
-       width: 160%;
-        height: 200px;
-        overflow: hidden;
-    }
-    .banner img {
-        width: 100%;
-        object-fit: cover;
-    }
-</style>
+
+# URL da imagem de fundo
+image_url = "https://meialua.net/wp-content/uploads/2024/06/tectoy.png"
+
+# Custom HTML/CSS para a imagem de fundo
+custom_html = f"""
+    <style>
+        body {{
+            background-image: url('{image_url}');
+            background-size: 100% 150px;
+
+
+
+
+        }}
+        .stButton, .stTextInput, .stCheckbox, .stRadio, .stSelectbox, .stSlider {{
+            background-color: rgba(0, 0, 0, 0.5);  /* Fundo semitransparente para widgets */
+            border-radius: 5px;
+            color: white;  /* Cor do texto dentro dos widgets */
+        }}
+    </style>
 """
 
-# Display the custom HTML
+# Exibe o HTML customizado
 st.components.v1.html(custom_html)
+
 # Função para definir as cores de todos os elementos
 def add_styles():
     st.markdown(
