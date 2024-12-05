@@ -11,7 +11,7 @@ custom_html = f"""
     <style>
         body {{
             background-image: url('{image_url}');
-            background-size: auto;  /* Cobre toda a tela */
+            background-size: contain;  /* Cobre toda a tela */
             background-position: center;  /* Centraliza a imagem */
             background-attachment: fixed;  /* Fixa a imagem ao rolar a página */
             color: white;  /* Cor do texto */
