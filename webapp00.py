@@ -12,7 +12,6 @@ def login_page():
             st.session_state.logged_in = True
             st.session_state.page = "form"  # Redireciona para o formulário após login
             st.success("Login bem-sucedido!")
-            st.experimental_rerun()  # Força o rerun para atualizar a página
         else:
             st.error("Nome de usuário ou senha incorretos.")
 
@@ -45,7 +44,7 @@ def form_page():
         # Redirecionar para o Google Forms com os dados preenchidos
         st.markdown(f'<a href="{url}" target="_blank">Clique aqui para enviar seus dados</a>', unsafe_allow_html=True)
 
-# Página principal (decide se exibe o login ou o formulário com base no login)
+# Verifica se o usuário está logado e decide qual página exibir
 if "logged_in" not in st.session_state or not st.session_state.logged_in:
     login_page()  # Exibe a página de login se o usuário não estiver logado
 else:
