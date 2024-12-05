@@ -1,27 +1,24 @@
 import streamlit as st
 
-# Função para definir as cores dos textos e botões
+# Função para definir as cores de todos os elementos
 def add_styles():
     st.markdown(
         """
         <style>
-            color: #DAA520;  /* Cor branca para o texto */
+        /* Modificar a cor de todos os textos */
+        .css-1d391kg, .css-1v0mbdj, .css-1b6t85b, .css-1v4t7gx {
+            color: #DAA520 !important;  /* Cor dourada para todos os textos */
         }
 
-        /* Modificar a cor do texto dos títulos */
-        .css-1v0mbdj {
-            color: #ff6347;  /* Cor vermelha para títulos */
-        }
-
-        /* Modificar a cor do texto dos inputs e outros campos de texto */
-        .css-1b6t85b {
-            color: #FFFF00;  /* Cor amarela para campos de texto */
-        }
-
-        /* Alterar a cor do botão */
+        /* Alterar a cor de fundo do botão */
         .css-1v4t7gx {
-            background-color: #4CAF50;  /* Cor verde para o botão */
-            color: white;  /* Cor do texto do botão */
+            background-color: #DAA520 !important;  /* Cor dourada para o botão */
+            color: white !important;  /* Cor do texto do botão */
+        }
+
+        /* Modificar a cor dos campos de texto */
+        .stTextInput input, .stTextArea textarea {
+            color: #DAA520 !important;  /* Cor dourada para os campos de texto */
         }
         </style>
         """, unsafe_allow_html=True)
