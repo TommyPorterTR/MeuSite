@@ -9,7 +9,7 @@ def add_background_image(image_url):
         .reportview-container {{
             background: url("{image_url}");
             background-size: cover;  /* Garante que a imagem cubra toda a tela */
-            background-position: full;  /* Centraliza a imagem */
+            background-position: ;  /* Centraliza a imagem */
             background-attachment: fixed; /* Garante que a imagem não se mova quando rolar a página */
             height: 100vh; /* Altura 100% da tela */
             width: 100%;
@@ -55,9 +55,6 @@ def form_page():
         "entry.618138322": assunto,
         "entry.1550799906": mensagem
     }
-
-    # Codificando os parâmetros para a URL
-    url = base_url + urllib.parse.urlencode(params)
 
     # Botão de envio para o Google Forms
     if st.button("Enviar"):
