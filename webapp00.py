@@ -11,10 +11,9 @@ custom_html = f"""
     <style>
         body {{
             background-image: url('{image_url}');
-            background-size: contain;  /* Cobre toda a tela */
-            background-position: auto;  /* Centraliza a imagem */
-            background-attachment: fixed;  /* Fixa a imagem ao rolar a página */
-            color: white;  /* Cor do texto */
+            background-size: 100% auto;  /* A largura será 100% do elemento, e a altura será proporcional à largura original da imagem */
+            background-size: auto 50%;   /* A altura será 50% do elemento, e a largura será proporcional à altura original da imagem */
+
         }}
         .stButton, .stTextInput, .stCheckbox, .stRadio, .stSelectbox, .stSlider {{
             background-color: rgba(0, 0, 0, 0.5);  /* Fundo semitransparente para widgets */
