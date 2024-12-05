@@ -1,33 +1,27 @@
 import streamlit as st
 
-# Definindo a configuração da página para layout "wide"
+# Defina o layout da página
 st.set_page_config(layout="wide")
 
-# URL da imagem de fundo
-image_url = "https://www.sega-brasil.com.br/Tectoy/images/e/ec/MDImagemSonic_1.gif"
-
-# Custom HTML/CSS para a imagem de fundo
-custom_html = f"""
+# Código HTML personalizado para o fundo
+custom_html = """
     <style>
-        body {{
-            background-image: url('{image_url}');
-            background-size: 320px 160px;  /* Define largura de 200px e altura de 100px */
+        body {
+            background-image: url('https://i.gifer.com/embedded/download/C33t.gif');
+            background-size: cover;  /* Faz o GIF cobrir toda a tela */
+            background-position: center;  /* Centraliza o GIF */
+            background-attachment: fixed;  /* Faz o GIF ficar fixo enquanto rola a página */
+        }
 
-
-
-
-
-
-        }}
-        .stButton, .stTextInput, .stCheckbox, .stRadio, .stSelectbox, .stSlider {{
-            background-color: rgba(0, 0, 0, 0.5);  /* Fundo semitransparente para widgets */
-            border-radius: 5px;
-            color: white;  /* Cor do texto dentro dos widgets */
-        }}
+        /* Personalizando o texto */
+        .css-1yqfnmp {
+            color: white;
+            font-size: 24px;
+        }
     </style>
 """
 
-# Exibe o HTML customizado
+# Exibe o código HTML
 st.components.v1.html(custom_html)
 
 # Função para definir as cores de todos os elementos
