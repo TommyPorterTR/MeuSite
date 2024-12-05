@@ -2,12 +2,12 @@ import streamlit as st
 import urllib.parse
 
 # Adicionar CSS para imagem de fundo
-def add_background_image(https://assets.folhavitoria.com.br/images/a0322d70-1f5c-11ef-9ec9-9f1d3c6a39fe--minified.jpg):
+def add_background_image("https://assets.folhavitoria.com.br/images/a0322d70-1f5c-11ef-9ec9-9f1d3c6a39fe--minified.jpg"):
     st.markdown(
         f"""
         <style>
         .reportview-container {{
-            background: url({https://assets.folhavitoria.com.br/images/a0322d70-1f5c-11ef-9ec9-9f1d3c6a39fe--minified.jpg});
+            background: url({"https://assets.folhavitoria.com.br/images/a0322d70-1f5c-11ef-9ec9-9f1d3c6a39fe--minified.jpg"});
             background-size: cover;
             background-position: center;
             height: 100vh; /* 100% da altura da tela */
