@@ -7,7 +7,7 @@ def add_styles():
         <style>
         /* Modificar a cor da fonte de todos os textos */
         .css-1d391kg {
-            color: #FFFFFF;  /* Cor branca para o texto */
+            color: #DAA520;  /* Cor branca para o texto */
         }
 
         /* Modificar a cor do texto dos títulos */
