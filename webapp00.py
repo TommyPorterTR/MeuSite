@@ -1,4 +1,5 @@
 import streamlit as st
+import urllib.parse
 
 st.set_page_config(layout="wide")
 # Custom HTML/CSS for the banner
@@ -21,7 +22,6 @@ custom_html = """
 
 # Display the custom HTML
 st.components.v1.html(custom_html)
-
 # Função para definir as cores de todos os elementos
 def add_styles():
     st.markdown(
