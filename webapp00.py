@@ -7,8 +7,7 @@ st.set_page_config(layout="wide")
 custom_html = """
     <style>
         body {
-            background-image: url('https://i.gifer.com/embedded/download/C33t.gif
-');
+            background-image: url('https://i.gifer.com/embedded/download/C33t.gif');
             background-size: 1880px 220px;  /* Define largura de 200px e altura de 100px */
 
 
