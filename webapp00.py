@@ -1,7 +1,6 @@
 import streamlit as st
-import urllib.parse
 
-# Função para adicionar a imagem de fundo com ajustes no CSS
+# Função para adicionar a imagem de fundo e definir a cor da fonte
 def add_background_image(image_url):
     st.markdown(
         f"""
@@ -9,15 +8,37 @@ def add_background_image(image_url):
         .reportview-container {{
             background: url("{image_url}");
             background-size: cover;  /* Garante que a imagem cubra toda a tela */
-            background-position: ;  /* Centraliza a imagem */
+            background-position: center;  /* Centraliza a imagem */
             background-attachment: fixed; /* Garante que a imagem não se mova quando rolar a página */
-            height: 100vh; /* Altura 100% da tela */
+            height: 100vh; /* 100% da altura da tela */
             width: 100%;
             position: absolute;
             top: 0;
             left: 0;
-            z-index: -1; /* Garante que o conteúdo fique acima da imagem */
+            z-index: -1; /* Garante que o conteúdo ficará acima da imagem */
         }}
+
+        /* Modificar a cor da fonte de todos os textos */
+        .css-1d391kg {
+            color: #FFFFFF;  /* Cor branca para o texto */
+        }
+
+        /* Modificar a cor do texto dos títulos */
+        .css-1v0mbdj {
+            color: #ff6347;  /* Cor vermelha para títulos */
+        }
+
+        /* Modificar a cor do texto dos inputs e outros campos de texto */
+        .css-1b6t85b {
+            color: #FFFF00;  /* Cor amarela para campos de texto */
+        }
+
+        /* Alterar a cor do botão */
+        .css-1v4t7gx {
+            background-color: #4CAF50;  /* Cor verde para o botão */
+            color: white;  /* Cor do texto do botão */
+        }
+
         </style>
         """, unsafe_allow_html=True)
 
@@ -56,6 +77,9 @@ def form_page():
         "entry.1550799906": mensagem
     }
 
+    # Codificando os parâmetros para a URL
+    url = base_url + "&".join([f"{k}={v}" for k, v in params.items()])
+
     # Botão de envio para o Google Forms
     if st.button("Enviar"):
         st.write("Formulário enviado com sucesso!")
@@ -63,7 +87,7 @@ def form_page():
         st.markdown(f'<a href="{url}" target="_blank">Clique aqui para enviar seus dados</a>', unsafe_allow_html=True)
 
 # Adiciona a imagem de fundo (coloque a URL da imagem desejada entre aspas)
-image_url = "https://meialua.net/wp-content/uploads/2024/06/tectoy.png"  # Substitua com a URL correta da imagem
+image_url = "https://assets.folhavitoria.com.br/images/a0322d70-1f5c-11ef-9ec9-9f1d3c6a39fe--minified.jpg"  # Substitua com a URL correta da imagem
 add_background_image(image_url)
 
 # Verifica se o usuário está logado e decide qual página exibir
