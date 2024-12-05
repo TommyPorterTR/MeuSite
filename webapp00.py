@@ -9,11 +9,11 @@ custom_html = """
 <style>
     .banner {
        width: 160%;
-        height: 200px;
+        height: 300px;
         overflow: hidden;
     }
     .banner img {
-        width: 50%;
+        width: 100%;
         object-fit: cover;
     }
 </style>
