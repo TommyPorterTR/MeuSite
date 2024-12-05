@@ -14,8 +14,9 @@ senha = st.text_input("Digite sua Senha:", type="password")
 
 
 if "vote" not in st.session_state:
-    if st.button("Login"): 
+    if st.button("Login"):
         if nome == 'admin' and senha == 'admin':
-            vote(login)
-else:
-    f"You voted for {st.session_state.vote['item']} because {st.session_state.vote['reason']}"
+            st.session_state.logged_in = True
+            st.success("Login bem-sucedido!")
+        else:
+            st.error("Nome de usuário ou senha incorretos.")
