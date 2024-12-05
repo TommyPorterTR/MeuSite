@@ -1,6 +1,30 @@
 import streamlit as st
 import urllib.parse
 
+# Adicionar CSS para imagem de fundo
+def add_background_image(https://assets.folhavitoria.com.br/images/a0322d70-1f5c-11ef-9ec9-9f1d3c6a39fe--minified.jpg):
+    st.markdown(
+        f"""
+        <style>
+        .reportview-container {{
+            background: url({https://assets.folhavitoria.com.br/images/a0322d70-1f5c-11ef-9ec9-9f1d3c6a39fe--minified.jpg});
+            background-size: cover;
+            background-position: center;
+            height: 100vh; /* 100% da altura da tela */
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1; /* Garante que o conteúdo ficará acima da imagem */
+        }}
+        </style>
+        """, unsafe_allow_html=True)
+
+
+
+
+
+
 # Função de login
 def login_page():
     ID = st.text_input("Digite seu ID:")
