@@ -11,8 +11,8 @@ custom_html = f"""
     <style>
         body {{
             background-image: url('{image_url}');
-            background-size: 100% 
-background-size: 350% 
+            background-size: 200px 100px;  /* Define largura de 200px e altura de 100px */
+
 
 
 
