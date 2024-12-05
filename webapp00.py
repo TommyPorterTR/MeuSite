@@ -15,6 +15,7 @@ custom_html = f"""
 
 
 
+
         }}
         .stButton, .stTextInput, .stCheckbox, .stRadio, .stSelectbox, .stSlider {{
             background-color: rgba(0, 0, 0, 0.5);  /* Fundo semitransparente para widgets */
