@@ -11,8 +11,8 @@ custom_html = f"""
     <style>
         body {{
             background-image: url('{image_url}');
-            background-size: 50% 50%;  /* A imagem ocupará 50% da largura e 50% da altura do elemento */
-background-size: 100% 100%;  /* A imagem será redimensionada para cobrir 100% da largura e altura do elemento */
+            background-size: 50% 
+background-size: 100% 
 
 
 
