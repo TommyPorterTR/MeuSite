@@ -11,8 +11,8 @@ custom_html = f"""
     <style>
         body {{
             background-image: url('{image_url}');
-            background-size: 600% auto;  /* A largura será 100% do elemento, e a altura será proporcional à largura original da imagem */
-            background-size: auto 600%;   /* A altura será 50% do elemento, e a largura será proporcional à altura original da imagem */
+            background-size: 1000% auto;  /* A largura será 100% do elemento, e a altura será proporcional à largura original da imagem */
+            background-size: auto 1000%;   /* A altura será 50% do elemento, e a largura será proporcional à altura original da imagem */
 
         }}
         .stButton, .stTextInput, .stCheckbox, .stRadio, .stSelectbox, .stSlider {{
