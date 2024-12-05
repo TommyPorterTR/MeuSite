@@ -4,7 +4,7 @@ import streamlit as st
 st.set_page_config(layout="wide")
 
 # URL da imagem de fundo
-image_url = "https://assets.folhavitoria.com.br/images/a0322d70-1f5c-11ef-9ec9-9f1d3c6a39fe--minified.jpg"
+image_url = "https://meialua.net/wp-content/uploads/2024/06/tectoy.png"
 
 # Custom HTML/CSS para a imagem de fundo
 custom_html = f"""
