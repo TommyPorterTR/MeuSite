@@ -10,7 +10,7 @@ def vote(item):
 
 ID = st.text_input("Digite seu ID:")
 nome = st.text_input("Digite seu Nome:")
-senha = st.text_input("Digite sua Senha:")
+senha = st.text_input("Digite sua Senha:", type="password")
 
 
 if "vote" not in st.session_state:
