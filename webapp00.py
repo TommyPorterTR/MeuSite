@@ -1,13 +1,13 @@
 import streamlit as st
 import urllib.parse
 
-# Adicionar CSS para imagem de fundo
-def add_background_image(`https://assets.folhavitoria.com.br/images/a0322d70-1f5c-11ef-9ec9-9f1d3c6a39fe--minified.jpg`):
+# Função para adicionar a imagem de fundo
+def add_background_image(image_url):
     st.markdown(
         f"""
         <style>
         .reportview-container {{
-            background: url({`https://assets.folhavitoria.com.br/images/a0322d70-1f5c-11ef-9ec9-9f1d3c6a39fe--minified.jpg`});
+            background: url({image_url});
             background-size: cover;
             background-position: center;
             height: 100vh; /* 100% da altura da tela */
@@ -20,7 +20,9 @@ def add_background_image(`https://assets.folhavitoria.com.br/images/a0322d70-1f5
         </style>
         """, unsafe_allow_html=True)
 
-
+# Adicione a imagem de fundo (coloque a URL da imagem desejada entre aspas)
+image_url = "https://assets.folhavitoria.com.br/images/a0322d70-1f5c-11ef-9ec9-9f1d3c6a39fe--minified.jpg"  # Substitua com o caminho da sua imagem ou URL
+add_background_image(image_url)
 
 
 
