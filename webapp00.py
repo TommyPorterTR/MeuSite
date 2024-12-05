@@ -13,7 +13,7 @@ def add_styles():
         /* Alterar a cor de fundo do botão */
         .css-1v4t7gx {
             background-color: #DAA520 !important;  /* Cor dourada para o botão */
-            color: white !important;  /* Cor do texto do botão */
+            color: yellow !important;  /* Cor do texto do botão */
         }
 
         /* Modificar a cor dos campos de texto */
