@@ -7,11 +7,13 @@ def login_page():
     nome = st.text_input("Digite seu nome:")
     senha = st.text_input("Digite sua senha:", type="password")
 
+    # Verifica se o botão de login foi clicado
     if st.button("Login"):
         if nome == 'admin' and senha == 'admin':  # Simples verificação de login
-            st.session_state.logged_in = True
+            st.session_state.logged_in = True  # Marca como logado
             st.session_state.page = "form"  # Redireciona para o formulário após login
             st.success("Login bem-sucedido!")
+            st.experimental_rerun()  # Força o app a ser recarregado para atualizar o estado
         else:
             st.error("Nome de usuário ou senha incorretos.")
 
