@@ -8,7 +8,7 @@ custom_html = """
     <style>
         body {
             background-image: url('https://archive.org/serve/segasms_Castelo_Ra-Tim-Bum_1997_Sega_-_Tec_Toy_BR/Castelo_Ra-Tim-Bum_1997_Sega_-_Tec_Toy_BR_screenshot.gif');
-            background-size: 880px 220px;  /* Define largura de 200px e altura de 100px */
+            background-size: 1280px 220px;  /* Define largura de 200px e altura de 100px */
 
 
 
