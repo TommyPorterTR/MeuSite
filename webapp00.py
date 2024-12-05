@@ -9,7 +9,7 @@ def add_background_image(image_url):
         .reportview-container {{
             background: url("{image_url}");
             background-size: cover;  /* Garante que a imagem cubra toda a tela */
-            background-position: center;  /* Centraliza a imagem */
+            background-position: full;  /* Centraliza a imagem */
             background-attachment: fixed; /* Garante que a imagem não se mova quando rolar a página */
             height: 100vh; /* Altura 100% da tela */
             width: 100%;
