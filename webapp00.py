@@ -12,7 +12,7 @@ custom_html = f"""
         body {{
             background-image: url('{image_url}');
             background-size: auto;  /* Cobre toda a tela */
-            background-position: center;  /* Centraliza a imagem */
+            background-position: auto;  /* Centraliza a imagem */
             background-attachment: fixed;  /* Fixa a imagem ao rolar a página */
             color: white;  /* Cor do texto */
         }}
