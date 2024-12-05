@@ -5,20 +5,25 @@ def add_styles():
     st.markdown(
         """
         <style>
-        /* Modificar a cor de todos os textos */
+        /* Modificar a cor de todos os textos (cor dourada para o conteúdo geral) */
         .css-1d391kg, .css-1v0mbdj, .css-1b6t85b, .css-1v4t7gx {
             color: #DAA520 !important;  /* Cor dourada para todos os textos */
+        }
+
+        /* Modificar a cor das perguntas (labels) para amarelo */
+        label {
+            color: #FFFF00 !important;  /* Cor amarela para as perguntas */
         }
 
         /* Alterar a cor de fundo do botão */
         .css-1v4t7gx {
             background-color: #DAA520 !important;  /* Cor dourada para o botão */
-            color: yellow !important;  /* Cor do texto do botão */
+            color: white !important;  /* Cor do texto do botão */
         }
 
         /* Modificar a cor dos campos de texto */
         .stTextInput input, .stTextArea textarea {
-            color: #FFFAF0 !important;  /* Cor dourada para os campos de texto */
+            color: #DAA520 !important;  /* Cor dourada para os campos de texto */
         }
         </style>
         """, unsafe_allow_html=True)
