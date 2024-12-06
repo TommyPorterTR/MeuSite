@@ -4,58 +4,14 @@ import urllib.parse
 # Definindo a configuração da página para layout "wide"
 st.set_page_config(layout="wide")
 
-# URL da imagem de fundo
-image_url = "https://meialua.net/wp-content/uploads/2024/06/tectoy.png"
+# Mandando ler arquivo CSS
+with open("style.css") as f:
+  st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-# Custom HTML/CSS para a imagem de fundo
-custom_html = f"""
-    <style>
-        body {{
-            background-image: url('{image_url}');
-            background-size: 100% 150px;
-
-
-
-
-        }}
-        .stButton, .stTextInput, .stCheckbox, .stRadio, .stSelectbox, .stSlider {{
-            background-color: rgba(0, 0, 0, 0.5);  /* Fundo semitransparente para widgets */
-            border-radius: 5px;
-            color: white;  /* Cor do texto dentro dos widgets */
-        }}
-    </style>
-"""
-
-# Exibe o HTML customizado
-st.components.v1.html(custom_html)
-
-# Função para definir as cores de todos os elementos
-def add_styles():
-    st.markdown(
-        """
-        <style>
-        /* Modificar a cor de todos os textos (cor dourada para o conteúdo geral) */
-        .css-1d391kg, .css-1v0mbdj, .css-1b6t85b, .css-1v4t7gx {
-            color: #DAA520 !important;  /* Cor dourada para todos os textos */
-        }
-
-        /* Modificar a cor das perguntas (labels) para amarelo */
-        label {
-            color: #FFFF00 !important;  /* Cor amarela para as perguntas */
-        }
-
-        /* Alterar a cor de fundo do botão */
-        .css-1v4t7gx {
-            background-color: #DAA520 !important;  /* Cor dourada para o botão */
-            color: white !important;  /* Cor do texto do botão */
-        }
-
-        /* Modificar a cor dos campos de texto */
-        .stTextInput input, .stTextArea textarea {
-            color: #FFFAF0 !important;  /* Cor dourada para os campos de texto */
-        }
-        </style>
-        """, unsafe_allow_html=True)
+# Adicionando HTML estilizado para cabeçalho
+st.html(
+  "<div><div style='background-color:white; margin=0; padding: 20px; height: 150px; text-align:center;'><div><img src='https://brasil.campus-party.org/wp-content/uploads/2023/08/Logo_Tectoy.png' style='max-height:120px; padding: 10px;'></div></div><div style='background-color: yellow; text-align:center;height:70px;'><h2 style='font-size: 28px; font-weight: bold; color:black;'>Abertura de Chamado</h2></div></div>"
+)
 
 # Função de login
 def login_page():
@@ -63,10 +19,9 @@ def login_page():
     nome = st.text_input("Digite seu nome:")
     senha = st.text_input("Digite sua senha:", type="password")
 
-    # Verifica se o botão de login foi clicado
     if st.button("Login"):
         if nome == 'admin' and senha == 'admin':  # Simples verificação de login
-            st.session_state.logged_in = True  # Marca como logado
+            st.session_state.logged_in = True
             st.session_state.page = "form"  # Redireciona para o formulário após login
             st.success("Login bem-sucedido!")
         else:
@@ -77,7 +32,7 @@ def form_page():
     ID = st.text_input("Digite seu ID:")
     nome = st.text_input("Digite seu nome:")
     email = st.text_input("Digite seu e-mail:")
-    prioridade = st.selectbox("Prioridade: ", ("Baixa", "Média", "Alta", "*Crítico*"))
+    prioridade = st.selectbox("Prioridade: ", ("Baixa", "Média", "Alta", "Crítico"))
     assunto = st.text_input("Assunto: ")
     mensagem = st.text_input("Mensagem: ")
 
@@ -93,16 +48,13 @@ def form_page():
     }
 
     # Codificando os parâmetros para a URL
-    url = base_url + "&".join([f"{k}={v}" for k, v in params.items()])
+    url = base_url + urllib.parse.urlencode(params)
 
     # Botão de envio para o Google Forms
     if st.button("Enviar"):
         st.write("Formulário enviado com sucesso!")
         # Redirecionar para o Google Forms com os dados preenchidos
         st.markdown(f'<a href="{url}" target="_blank">Clique aqui para enviar seus dados</a>', unsafe_allow_html=True)
-
-# Adiciona as alterações de estilo
-add_styles()
 
 # Verifica se o usuário está logado e decide qual página exibir
 if "logged_in" not in st.session_state or not st.session_state.logged_in:
